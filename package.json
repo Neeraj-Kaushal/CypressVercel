@@ -1,0 +1,23 @@
+{
+  "name": "ernx-cypress-automation",
+  "version": "1.0.0",
+  "description": "Minimal Cypress automation for ERNX login page with BDD",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test": "cypress run --spec cypress/e2e/features/*.feature",
+    "test:bdd": "cypress run --spec cypress/e2e/features/ernx-login.feature"
+  },
+  "devDependencies": {
+    "cypress": "^13.6.0",
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0"
+  },
+  "keywords": ["cypress", "automation", "testing", "ernx", "bdd", "cucumber"],
+  "author": "",
+  "license": "ISC",
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/e2e/step_definitions/*.js"
+  }
+}
